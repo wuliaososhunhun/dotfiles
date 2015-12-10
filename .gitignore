@@ -1,14 +1,35 @@
-# Compiled Python files
-*.pyc
-
-# Folder view configuration files
+# Ignore the target and log directories (including all contents and in all sub-dirs)
+target/
+logs/
+cobertura.ser
+.clover
+# I Don't know what creates .DS_Store (from Omar)
 .DS_Store
-Desktop.ini
+# Ignore log files (usfull if you tee build output to log files i.e. 'mvn clean package 2>&1| tee log.txt')
+*log.txt
+# Ignore intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
 
-# Thumbnail cache files
-._*
-Thumbs.db
+# eclipse files
+.classpath
+.project
+.settings/
+.springBeans
+.cproject
+.pydevproject
 
-# Files that might appear on external disks
-.Spotlight-V100
-.Trashes
+# c, c++, make and cmake 
+CMakeCache.txt
+CMakeFiles/
+Makefile
+*.cmake
+*.o
+*.dylib
+
+# Ignore the Sensitive folder files
+sensitive/
+Sensitive.*
+

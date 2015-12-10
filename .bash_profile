@@ -1,6 +1,20 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# alias
+alias vi='vim'
+alias sshXXX='read SERVER_INDEX ; ssh XXX@XXX0$SERVER_INDEX'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# functions
+gitcheck() { git log --pretty=oneline --abbrev-commit $1..$2 | grep -E ".*(IFZ-[0-9]+)[ :'].*" | sed - E "s/.*(IFZ-  [0-9]+)[ :'].*/\1/g" | sort | uniq ; }
+
+# source
+[[ -s ~/.git-completion.bash ]] && source ~/.git-completion.bash
+[[ -s ~/.git-prompt.sh ]] && source ~/.git-prompt.sh
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
