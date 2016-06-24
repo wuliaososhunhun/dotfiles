@@ -174,3 +174,5 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[credential "https://example.com"]
+	username = wuliaososhunhun@hotmail.com
